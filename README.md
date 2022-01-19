@@ -1,2 +1,1 @@
-# hello-world
-This is a test
+This class includes all the Nathan methods that I use for my personal use while programming in Java.
