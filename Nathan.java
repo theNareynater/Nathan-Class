@@ -4,15 +4,10 @@ import java.util.Scanner;
 
 class Nathan {
 
-
-
-
-
-  //INTEGER METHODS
-
+  //INTEGER METHODS ----------------------------------------------------------------------------------------
 
   //digitSum Method - Nathan.digitSum(integer)
-      //Returns the sum of the inputed integer's digits.
+    //Returns the sum of the inputed integer's digits.
   public static int digitSum(int in) {
     String numS = in + "";
     int length = numS.length();
@@ -29,7 +24,6 @@ class Nathan {
     }
     return sum;
   }
-
 
   //intRangeInput Method - Nathan.intRangeInput(lowerBound, upperBound)
       //Receives input from the user when the desired input is an integer within the specified range. The upper and lower bounds are both inclusive. If an undesired input is received, the user is prompted again. (Note: will still break if user enters an non-numerical input)
@@ -49,12 +43,7 @@ class Nathan {
     }
   }
 
-
-
-
-
-  //DOUBLE METHODS
-
+  //DOUBLE METHODS-------------------------------------------------------------------------
 
   //roundTenth Method - Nathan.roundTenth(double)
       //Rounds a double value to the nearest tenth.
@@ -62,7 +51,6 @@ class Nathan {
     in = (Math.round(in * 10));
     return in / 10;
   }
-
 
   //roundHund Method - Nathan.roundHund(double)
       //Rounds a double value to the nearest hundredth.
@@ -79,12 +67,7 @@ class Nathan {
     return in / 1000;
   }
 
-
-
-
-
-  //STRING & PRINTING METHODS
-
+  //STRING & PRINTING METHODS------------------------------------------------------------------------------------------------------
 
   //spacerLeft Method - Nathan.spacerLeft(String, int spaceSize)
       //Prints the amount of spaces equal to the difference between the inputed spaceSize and the length of the inputed string, then prints the string. Useful for creating tables where the length of one cell is inputed as the spaceSize, so that the extra spaces for the cell can be automatically filled for any string inside the cell.
@@ -97,7 +80,6 @@ class Nathan {
     System.out.print(in);
   }
 
-
   //spacerRight Method - Nathan.spacerRight(String, int spaceSize)
       //Prints the inputed string, then prints the amount of spaces equal to the difference between the inputed spaceSize and the length of the string. Useful for creating tables where the length of one cell is inputed as the spaceSize, so that the extra spaces for the cell can be automatically filled for any string inside the cell.
   public static void spacerRight(String in, int space) {
@@ -108,7 +90,6 @@ class Nathan {
       space--;
     }
   }
-
 
   //charCount Method - Nathan.charCount(String, searchChar)
       //Counts the number of times an inputed character (searchChar) appears in the inputed string and returns the value as an integer.
@@ -131,7 +112,6 @@ class Nathan {
     return count;
   }
 
-
   //intMatrixPrint Method - Nathan.intMatrixPrint(2dArray, elementSpaceSize)
       //Prints the inputed 2D integer array so that the elements are visably organized in rows and columns. The inputted elementSpaceSize value sets the width of each column.
   public static void intMatrixPrint(int[][] matrix, int space) {
@@ -147,7 +127,6 @@ class Nathan {
       }
     }
   }
-
 
   //doubleMatrixPrint Method - Nathan.doubleMatrixPrint(2dArray, elementSpaceSize)
       //Prints the inputed 2D double array so that the elements are visably organized in rows and columns. The inputted elementSpaceSize value sets the width of each column.
@@ -165,12 +144,7 @@ class Nathan {
     }
   }
 
-
-
-
-
-  //BOOLEAN METHODS
-
+  //BOOLEAN METHODS----------------------------------------------------------------------------------------------------------------------------------
 
   //choiceInput Method - Nathan.choiceInput()
       //Receives input from the user when the desired input is a yes or no answer, storing "yes" as true and "no" as false in a boolean. If an undesired input is received, the user is prompted again. The input is not case sensitive.
@@ -195,9 +169,4 @@ class Nathan {
       }
     }
   }
-
-
-
-
-
 }
