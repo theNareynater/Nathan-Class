@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class Nathan {
 
-  //INTEGER METHODS ----------------------------------------------------------------------------------------
+  //INTEGER METHODS -------------------------------------------------------
 
   //digitSum Method - Nathan.digitSum(integer)
     //Returns the sum of the inputed integer's digits.
@@ -43,7 +43,7 @@ class Nathan {
     }
   }
 
-  //DOUBLE METHODS-------------------------------------------------------------------------
+  //DOUBLE METHODS -------------------------------------------------------
 
   //roundTenth Method - Nathan.roundTenth(double)
       //Rounds a double value to the nearest tenth.
@@ -67,7 +67,7 @@ class Nathan {
     return in / 1000;
   }
 
-  //STRING & PRINTING METHODS------------------------------------------------------------------------------------------------------
+  //STRING & PRINTING METHODS --------------------------------------------
 
   //spacerLeft Method - Nathan.spacerLeft(String, int spaceSize)
       //Prints the amount of spaces equal to the difference between the inputed spaceSize and the length of the inputed string, then prints the string. Useful for creating tables where the length of one cell is inputed as the spaceSize, so that the extra spaces for the cell can be automatically filled for any string inside the cell.
@@ -144,7 +144,7 @@ class Nathan {
     }
   }
 
-  //BOOLEAN METHODS----------------------------------------------------------------------------------------------------------------------------------
+  //BOOLEAN METHODS -----------------------------------------------------
 
   //choiceInput Method - Nathan.choiceInput()
       //Receives input from the user when the desired input is a yes or no answer, storing "yes" as true and "no" as false in a boolean. If an undesired input is received, the user is prompted again. The input is not case sensitive.
