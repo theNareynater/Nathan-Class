@@ -25,9 +25,9 @@ class Nathan {
     return sum;
   }
 
-  //intRangeInput Method - Nathan.intRangeInput(lowerBound, upperBound)
-      //Receives input from the user when the desired input is an integer within the specified range. The upper and lower bounds are both inclusive. If an undesired input is received, the user is prompted again. (Note: will still break if user enters an non-numerical input)
-  public static int intRangeInput(double low, double high) {
+  //intInput Method - Nathan.intInput(lowerBound, upperBound, invalidMessageString)
+      //Receives input from the user when the desired input is an integer within the specified range. The upper and lower bounds are both inclusive. If an undesired input is received, the user is prompted again, displaying the inputted invalidMessageString. (Note: will still break if user enters an non-numerical input)
+  public static int intInput(double low, double high, String message) {
     Scanner input = new Scanner(System.in);
     while (true) {
       System.out.print("(Enter your number)\n");
@@ -37,7 +37,7 @@ class Nathan {
          return iIn;
        }
        else {
-         System.out.print("\nThat doesn't work. Try again.\n");
+         System.out.print("\n" + message + "\n");
          continue;
       }
     }
@@ -146,9 +146,9 @@ class Nathan {
 
   //BOOLEAN METHODS -----------------------------------------------------
 
-  //choiceInput Method - Nathan.choiceInput()
-      //Receives input from the user when the desired input is a yes or no answer, storing "yes" as true and "no" as false in a boolean. If an undesired input is received, the user is prompted again. The input is not case sensitive.
-  public static boolean choiceInput() {
+  //choiceInput Method - Nathan.choiceInput(invalidMessageString)
+      //Receives input from the user when the desired input is a yes or no answer, storing "yes" as true and "no" as false in a boolean. If an undesired input is received, the user is prompted again, displaying the inputted invalidMessageString. The input is not case sensitive.
+  public static boolean choiceInput(String message) {
     Scanner input = new Scanner(System.in);
     String answer = "";
     boolean choice = false;
@@ -165,7 +165,7 @@ class Nathan {
         return choice;
       }
       else {
-        System.out.print("\nThat doesn't work. Try again.\n");
+        System.out.print("\n" + message + "\n");
       }
     }
   }
