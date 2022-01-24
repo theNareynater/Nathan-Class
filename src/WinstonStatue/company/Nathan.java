@@ -9,7 +9,8 @@ class Nathan {
   //INTEGER METHODS -------------------------------------------------------
 
   //digitSum Method - Nathan.digitSum(integer)
-    //Returns the sum of the inputed integer's digits.
+  //Returns the sum of the inputed integer's digits.
+  /** digitSum takes and int and sums its digits **/
   public static int digitSum(int in) {
     String numS = in + "";
     int length = numS.length();
