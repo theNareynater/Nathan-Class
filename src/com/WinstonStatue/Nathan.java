@@ -4,7 +4,7 @@ package com.WinstonStatue;
 
 import java.util.Scanner;
 /** @author Nathan Whitacre, Ivan Freeman
- *  @version v0.1.1
+ *  @version v0.1.2
  *  **/
 
 public class Nathan {
@@ -21,9 +21,9 @@ public class Nathan {
   public static int digitSum(int in) {
     String numS = in + "";
     int length = numS.length();
-    char digit = '0';
-    String digS = "0";
-    int intDig = 0;
+    char digit;
+    String digS;
+    int intDig;
     int sum = 0;
     while (length > 0) {
       digit = numS.charAt(length-1);
@@ -50,12 +50,10 @@ public class Nathan {
       System.out.print("(Enter your number)\n");
        double dIn = input.nextDouble();
        if ((dIn >= low) && (dIn <= high) && ((dIn % 1) == 0)) {
-         int iIn = (int)(dIn);
-         return iIn;
+         return (int)(dIn);
        }
        else {
          System.out.print("\n" + message + "\n");
-         continue;
       }
     }
   }
@@ -142,13 +140,13 @@ public class Nathan {
   //intMatrixPrint Method - Nathan.intMatrixPrint(2dArray, elementSpaceSize)
       //Prints the inputed 2D integer array so that the elements are visably organized in rows and columns. The inputted elementSpaceSize value sets the width of each column.
   public static void intMatrixPrint(int[][] matrix, int space) {
-    String element = " ";
-    for (int row = 0; row < matrix.length; row++) {
-      for (int colm = 0; colm < matrix[row].length; colm++) {
-        element = String.valueOf(matrix[row][colm]);
+    String element;
+    for (int[] ints : matrix) {
+      for (int colm = 0; colm < ints.length; colm++) {
+        element = String.valueOf(ints[colm]);
         spacerLeft(element, space);
         System.out.print(" ");
-        if (colm == (matrix[row].length - 1)) {
+        if (colm == (ints.length - 1)) {
           System.out.println();
         }
       }
@@ -158,13 +156,13 @@ public class Nathan {
   //doubleMatrixPrint Method - Nathan.doubleMatrixPrint(2dArray, elementSpaceSize)
       //Prints the inputed 2D double array so that the elements are visably organized in rows and columns. The inputted elementSpaceSize value sets the width of each column.
   public static void doubleMatrixPrint(double[][] matrix, int space) {
-    String element = " ";
-    for (int row = 0; row < matrix.length; row++) {
-      for (int colm = 0; colm < matrix[row].length; colm++) {
-        element = String.valueOf(matrix[row][colm]);
+    String element;
+    for (double[] doubles : matrix) {
+      for (int colm = 0; colm < doubles.length; colm++) {
+        element = String.valueOf(doubles[colm]);
         spacerLeft(element, space);
         System.out.print(" ");
-        if (colm == (matrix[row].length - 1)) {
+        if (colm == (doubles.length - 1)) {
           System.out.println();
         }
       }
@@ -177,19 +175,16 @@ public class Nathan {
       //Receives input from the user when the desired input is a yes or no answer, storing "yes" as true and "no" as false in a boolean. If an undesired input is received, the user is prompted again, displaying the inputted invalidMessageString. The input is not case sensitive.
   public static boolean choiceInput(String message) {
     Scanner input = new Scanner(System.in);
-    String answer = "";
-    boolean choice = false;
+    String answer;
     while (true) {
       System.out.print("(Enter yes or no)\n");
       answer = input.nextLine();
       answer = answer.toLowerCase();
-      if (answer.equals("no") == true) {
-        choice = false;
-        return choice;
+      if (answer.equals("no")) {
+        return false;
       }
-      else if (answer.equals("yes") == true) {
-        choice = true;
-        return choice;
+      else if (answer.equals("yes")) {
+        return true;
       }
       else {
         System.out.print("\n" + message + "\n");
