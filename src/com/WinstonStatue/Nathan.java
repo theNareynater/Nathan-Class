@@ -3,6 +3,9 @@ package com.WinstonStatue;
 //Nathan Methods
 
 import java.util.Scanner;
+/** @author Nathan Whitacre, Ivan Freeman
+ *  @version v0.1.1
+ *  **/
 
 public class Nathan {
 
@@ -10,7 +13,11 @@ public class Nathan {
 
   //digitSum Method - Nathan.digitSum(integer)
   //Returns the sum of the inputed integer's digits.
-  /** digitSum takes and int and sums its digits **/
+
+  /** takes a number and sums all its digits
+   * @param in the integer in
+   * @return the sum of the digits
+   * **/
   public static int digitSum(int in) {
     String numS = in + "";
     int length = numS.length();
@@ -29,7 +36,14 @@ public class Nathan {
   }
 
   //intInput Method - Nathan.intInput(lowerBound, upperBound, invalidMessageString)
-      //Receives input from the user when the desired input is an integer within the specified range. The upper and lower bounds are both inclusive. If an undesired input is received, the user is prompted again, displaying the inputted invalidMessageString. (Note: will still break if user enters an non-numerical input)
+
+  /**Receives input from the user when the desired input is an integer within the specified range. The upper and lower bounds are both inclusive. If an undesired input is received, the user is prompted again, displaying the inputted invalidMessageString. (Note: will still break if user enters an non-numerical input)
+   *
+   * @param low lowest number in the range
+   * @param high highest number in the range
+   * @param message message displayed if number isn't in the range
+   * @return the number guessed as an int
+   */
   public static int intInput(double low, double high, String message) {
     Scanner input = new Scanner(System.in);
     while (true) {
@@ -49,14 +63,24 @@ public class Nathan {
   //DOUBLE METHODS -------------------------------------------------------
 
   //roundTenth Method - Nathan.roundTenth(double)
-      //Rounds a double value to the nearest tenth.
+
+  /** Rounds a double value to the nearest tenth.
+   *
+   * @param in double in
+   * @return double rounded to the nearest tenth
+   */
   public static double roundTenth(double in) {
     in = (Math.round(in * 10));
     return in / 10;
   }
 
   //roundHund Method - Nathan.roundHund(double)
-      //Rounds a double value to the nearest hundredth.
+
+  /** Rounds a double value to the nearest hundredth.
+   *
+   * @param in double in
+   * @return double rounded to the nearest hundredth
+   */
   public static double roundHund(double in) {
     in = (Math.round(in * 100));
     return in / 100;
