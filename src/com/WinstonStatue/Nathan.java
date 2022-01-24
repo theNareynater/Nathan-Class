@@ -1,4 +1,4 @@
-package WinstonStatue.company;
+package com.WinstonStatue;
 
 //Nathan Methods
 
