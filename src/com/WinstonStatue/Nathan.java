@@ -4,7 +4,7 @@ package com.WinstonStatue;
 
 import java.util.Scanner;
 /** @author Nathan Whitacre, Ivan Freeman
- *  @version v0.1.2
+ *  @version v0.1.3
  *  **/
 
 public class Nathan {
@@ -86,7 +86,12 @@ public class Nathan {
 
 
   //roundThou Method - Nathan.roundThou(double)
-      //Rounds a double value to the nearest thousanth.
+
+  /** Rounds a double value to the nearest thousandth.
+   *
+   * @param in double in
+   * @return double rounded to the nearest thousandth
+   */
   public static double roundThou(double in) {
     in = (Math.round(in * 1000));
     return in / 1000;
@@ -95,7 +100,12 @@ public class Nathan {
   //STRING & PRINTING METHODS --------------------------------------------
 
   //spacerLeft Method - Nathan.spacerLeft(String, int spaceSize)
-      //Prints the amount of spaces equal to the difference between the inputed spaceSize and the length of the inputed string, then prints the string. Useful for creating tables where the length of one cell is inputed as the spaceSize, so that the extra spaces for the cell can be automatically filled for any string inside the cell.
+  /**
+   *   Prints the amount of spaces equal to the difference between the inputed spaceSize and the length of the inputed string, then prints the string. Useful for creating tables where the length of one cell is inputed as the spaceSize, so that the extra spaces for the cell can be automatically filled for any string inside the cell.
+   * @param in string in
+   * @param space amount of spaces to the left of the string
+   **/
+
   public static void spacerLeft(String in, int space) {
     space -= in.length();
     while (space > 0) {
@@ -106,7 +116,12 @@ public class Nathan {
   }
 
   //spacerRight Method - Nathan.spacerRight(String, int spaceSize)
-      //Prints the inputed string, then prints the amount of spaces equal to the difference between the inputed spaceSize and the length of the string. Useful for creating tables where the length of one cell is inputed as the spaceSize, so that the extra spaces for the cell can be automatically filled for any string inside the cell.
+
+  /** Prints the inputed string, then prints the amount of spaces equal to the difference between the inputed spaceSize and the length of the string. Useful for creating tables where the length of one cell is inputed as the spaceSize, so that the extra spaces for the cell can be automatically filled for any string inside the cell.
+   *
+   * @param in string in
+   * @param space amount of spaces to the right of the string
+   */
   public static void spacerRight(String in, int space) {
     System.out.print(in);
     space -= in.length();
@@ -117,7 +132,13 @@ public class Nathan {
   }
 
   //charCount Method - Nathan.charCount(String, searchChar)
-      //Counts the number of times an inputed character (searchChar) appears in the inputed string and returns the value as an integer.
+
+  /** Counts the number of times an inputed character (searchChar) appears in the inputed string and returns the value as an integer.
+   *
+   * @param word inputed word
+   * @param letter letter to search for in word
+   * @return number of letter in word
+   */
   public static int charCount(String word, char letter) {
     int count = 0;
     int index = 0;
@@ -138,7 +159,12 @@ public class Nathan {
   }
 
   //intMatrixPrint Method - Nathan.intMatrixPrint(2dArray, elementSpaceSize)
-      //Prints the inputed 2D integer array so that the elements are visably organized in rows and columns. The inputted elementSpaceSize value sets the width of each column.
+
+  /** Prints the inputed 2D integer array so that the elements are visably organized in rows and columns. The inputted elementSpaceSize value sets the width of each column.
+   *
+   * @param matrix 2d int matrix in
+   * @param space amount of space between each value
+   */
   public static void intMatrixPrint(int[][] matrix, int space) {
     String element;
     for (int[] ints : matrix) {
@@ -154,7 +180,12 @@ public class Nathan {
   }
 
   //doubleMatrixPrint Method - Nathan.doubleMatrixPrint(2dArray, elementSpaceSize)
-      //Prints the inputed 2D double array so that the elements are visably organized in rows and columns. The inputted elementSpaceSize value sets the width of each column.
+
+  /** Prints the inputed 2D double array so that the elements are visably organized in rows and columns. The inputted elementSpaceSize value sets the width of each column.
+   *
+   * @param matrix 2d double matrix in
+   * @param space amount of space between each value
+   */
   public static void doubleMatrixPrint(double[][] matrix, int space) {
     String element;
     for (double[] doubles : matrix) {
@@ -172,7 +203,12 @@ public class Nathan {
   //BOOLEAN METHODS -----------------------------------------------------
 
   //choiceInput Method - Nathan.choiceInput(invalidMessageString)
-      //Receives input from the user when the desired input is a yes or no answer, storing "yes" as true and "no" as false in a boolean. If an undesired input is received, the user is prompted again, displaying the inputted invalidMessageString. The input is not case sensitive.
+
+  /** Receives input from the user when the desired input is a yes or no answer, storing "yes" as true and "no" as false in a boolean. If an undesired input is received, the user is prompted again, displaying the inputted invalidMessageString. The input is not case sensitive.
+   *
+   * @param message yes or no answer
+   * @return true if yes, false if no, message if neither
+   */
   public static boolean choiceInput(String message) {
     Scanner input = new Scanner(System.in);
     String answer;
