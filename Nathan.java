@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-class Nathan {
+public class Nathan {
 
   //INTEGER METHODS -------------------------------------------------------
 
